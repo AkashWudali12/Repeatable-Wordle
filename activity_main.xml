@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wordle!"
+        android:textSize="32sp"
+        android:id="@+id/world_title"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="streak: 0"
+        android:id="@+id/score_textView"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/high_score_textView"
+        app:layout_constraintTop_toBottomOf="@id/world_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="high score: 0"
+        android:id="@+id/high_score_textView"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@id/world_title"
+        app:layout_constraintLeft_toRightOf="@id/score_textView"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guess"
+        android:id="@+id/guess_button"
+        android:onClick="checkGuess"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/new_game_button"
+        app:layout_constraintTop_toBottomOf="@id/score_textView"
+        app:layout_constraintBottom_toTopOf="@id/main_linear_layout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_game_button"
+        android:text="Start"
+        android:onClick="startGame"
+        app:layout_constraintLeft_toRightOf="@id/guess_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score_textView"
+        app:layout_constraintBottom_toTopOf="@id/main_linear_layout"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:orientation="vertical"
+        android:id="@+id/main_linear_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <EditText
+                android:id="@+id/edit_11"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_13"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_14"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_15"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <EditText
+                android:id="@+id/edit_21"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_22"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_23"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_24"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_25"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <EditText
+                android:id="@+id/edit_31"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_32"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_33"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_34"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_35"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <EditText
+                android:id="@+id/edit_41"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_42"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_43"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_44"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_45"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <EditText
+                android:id="@+id/edit_51"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_52"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_53"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_54"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_55"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <EditText
+                android:id="@+id/edit_61"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_62"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_63"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_64"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edit_65"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:maxLength="1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/background_edit_text">
+            </EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Start: Guess a five letter word"
+        android:textSize="20sp"
+        android:id="@+id/game_over"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_linear_layout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
