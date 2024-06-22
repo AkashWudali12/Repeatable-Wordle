@@ -38,7 +38,7 @@ Contributions are welcome! If you have suggestions on how to improve the app or 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
-Your Name – [Your Email](akash.wudali@gmail.com)
+Your Name – akash.wudali@gmail.com
 
 [Video Demonstration Link](https://drive.google.com/file/d/1TkBeW4iIpBEWYLCv6jo0NAVdOZDnz07a/view)
 
